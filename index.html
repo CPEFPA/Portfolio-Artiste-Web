@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Artiste | Coaching & Performances</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Carousel Background -->
+  <div class="video-carousel" id="videoCarousel">
+    <div class="video-slide active" data-video="WtMJ1dGa5TE"></div>
+    <div class="video-slide" data-video="9loX_HS6YqE"></div>
+    <div class="video-slide" data-video="JwoV1-ykm9E"></div>
+    <div class="video-slide" data-video="4o_svjnJT2o"></div>
+    <div class="video-slide" data-video="xePAZ_nypxM"></div>
+    
+    <!-- Controls -->
+    <button class="carousel-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+    <button class="carousel-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+    <div class="carousel-indicators" id="indicators"></div>
+    
+    <!-- Overlay pour lisibilité -->
+    <div class="overlay"></div>
+  </div>
+
+  <!-- Contenu principal -->
+  <main class="content">
+    <header class="hero">
+      <h1>Bienvenue dans mon univers musical</h1>
+      <p>Artiste • Pédagogue • Manager</p>
+    </header>
+
+    <!-- Navigation principale -->
+    <nav class="main-nav">
+      <button class="nav-btn" data-target="partitions">
+        <i class="fas fa-music"></i>
+        <span>Voir mes partitions</span>
+      </button>
+      <button class="nav-btn" data-target="evenements">
+        <i class="fas fa-calendar-alt"></i>
+        <span>Événements & concerts</span>
+      </button>
+      <button class="nav-btn" data-target="coaching">
+        <i class="fas fa-microphone-alt"></i>
+        <span>Coaching vocal & management</span>
+      </button>
+    </nav>
+
+    <!-- Sections de contenu (modales) -->
+    <section id="partitions" class="content-section hidden">
+      <div class="section-card">
+        <h2><i class="fas fa-music"></i> Mes Partitions</h2>
+        <p>Découvrez mes compositions originales et arrangements exclusifs.</p>
+        <ul class="resource-list">
+          <li><a href="#" target="_blank">🎼 Ballade en Do majeur <span class="badge">PDF</span></a></li>
+          <li><a href="#" target="_blank">🎼 Rythmes africains modernes <span class="badge">PDF + MIDI</span></a></li>
+          <li><a href="#" target="_blank">🎼 Harmonies vocales <span class="badge">Partition + Audio</span></a></li>
+        </ul>
+        <button class="close-btn"><i class="fas fa-times"></i> Fermer</button>
+      </div>
+    </section>
+
+    <section id="evenements" class="content-section hidden">
+      <div class="section-card">
+        <h2><i class="fas fa-calendar-alt"></i> Événements & Concerts</h2>
+        <p>Retrouvez mes prochaines dates et revivez mes performances.</p>
+        <div class="events-grid">
+          <div class="event-card">
+            <span class="event-date">15 JUIN 2026</span>
+            <h3>Concert Acoustique - Paris</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Le Trianon, 18h30</p>
+            <a href="#" class="btn-primary">Réserver</a>
+          </div>
+          <div class="event-card">
+            <span class="event-date">22 JUIN 2026</span>
+            <h3>Festival des Voix - Lyon</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Amphithéâtre, 20h00</p>
+            <a href="#" class="btn-primary">Programme</a>
+          </div>
+        </div>
+        <button class="close-btn"><i class="fas fa-times"></i> Fermer</button>
+      </div>
+    </section>
+
+    <section id="coaching" class="content-section hidden">
+      <div class="section-card">
+        <h2><i class="fas fa-microphone-alt"></i> Coaching Vocal & Management</h2>
+        <p>Accompagnement personnalisé pour artistes émergents et confirmés.</p>
+        <div class="services-grid">
+          <div class="service-item">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Coaching vocal</h3>
+            <p>Technique, interprétation, préparation scène</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-briefcase"></i>
+            <h3>Management artistique</h3>
+            <p>Stratégie de carrière, production, communication</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-video"></i>
+            <h3>Sessions en ligne</h3>
+            <p>Cours individuels via Zoom/Google Meet</p>
+          </div>
+        </div>
+        <a href="mailto:contact@votreartiste.com" class="btn-primary">Me contacter</a>
+        <button class="close-btn"><i class="fas fa-times"></i> Fermer</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Votre Nom • <a href="mailto:contact@votreartiste.com">contact@votreartiste.com</a></p>
+    <div class="social-links">
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
