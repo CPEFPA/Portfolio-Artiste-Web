@@ -3,22 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CRES POLY ART | Portfolio Musical</title>
+  <title>CRES POLY ART | Portfolio & Formations Musicales</title>
   
   <!-- CSS Inline pour background vidéo (évite les problèmes de cache) -->
   <style>
     /* ===== BACKGROUND YOUTUBE PLEIN ÉCRAN ===== */
     .video-bg-container {
-      position: fixed;
-      top: 0; left: 0;
+      position: fixed; top: 0; left: 0;
       width: 100vw; height: 100vh;
-      overflow: hidden;
-      z-index: -2;
-      background: #000;
+      overflow: hidden; z-index: -2; background: #000;
     }
     .video-bg-container iframe {
-      position: absolute;
-      top: 50%; left: 50%;
+      position: absolute; top: 50%; left: 50%;
       width: 100vw; height: 100vh;
       min-width: 177.78vh !important;
       min-height: 56.25vw !important;
@@ -35,11 +31,9 @@
     
     /* ===== BOUTON WHATSAPP FLOTTANT ===== */
     .whatsapp-float {
-      position: fixed;
-      bottom: 25px; right: 25px;
+      position: fixed; bottom: 25px; right: 25px;
       width: 60px; height: 60px;
-      background: #25D366;
-      color: white;
+      background: #25D366; color: white;
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-size: 2rem;
@@ -54,7 +48,6 @@
     }
     .whatsapp-float i { pointer-events: none; }
     
-    /* Responsive bouton WhatsApp */
     @media (max-width: 600px) {
       .whatsapp-float {
         width: 52px; height: 52px;
@@ -82,7 +75,7 @@
   <div class="video-overlay"></div>
 
   <!-- Bouton WhatsApp Flottant -->
-  <a href="https://wa.me/22890588358?text=Bonjour%20CRES%20POLY%20ART,%20je%20souhaite%20plus%20d'informations" 
+  <a href="https://wa.me/22890588358?text=Bonjour%20CRES%20POLY%20ART,%20je%20souhaite%20plus%20d'informations%20sur%20vos%20formations" 
      class="whatsapp-float" 
      target="_blank" 
      aria-label="Contacter sur WhatsApp"
@@ -94,10 +87,10 @@
   <main class="content">
     <header class="hero">
       <h1>CRES POLY ART</h1>
-      <p>Artiste • Pédagogue • Manager</p>
+      <p>Artiste • Pédagogue • Manager • Formateur</p>
     </header>
 
-    <!-- Navigation -->
+    <!-- Navigation (4 boutons) -->
     <nav class="main-nav">
       <button class="nav-btn" data-target="partitions">
         <i class="fas fa-music"></i><span>Voir mes partitions</span>
@@ -108,9 +101,12 @@
       <button class="nav-btn" data-target="coaching">
         <i class="fas fa-microphone-alt"></i><span>Coaching vocal & management</span>
       </button>
+      <button class="nav-btn" data-target="formations" style="background: rgba(46,204,113,0.2); border-color: rgba(46,204,113,0.5);">
+        <i class="fas fa-graduation-cap"></i><span>Nos Formations</span>
+      </button>
     </nav>
 
-    <!-- Modales -->
+    <!-- Modale : Partitions -->
     <section id="partitions" class="content-section hidden">
       <div class="section-card">
         <h2><i class="fas fa-music"></i> Mes Partitions</h2>
@@ -124,6 +120,7 @@
       </div>
     </section>
 
+    <!-- Modale : Événements -->
     <section id="evenements" class="content-section hidden">
       <div class="section-card">
         <h2><i class="fas fa-calendar-alt"></i> Événements & Concerts</h2>
@@ -146,6 +143,7 @@
       </div>
     </section>
 
+    <!-- Modale : Coaching -->
     <section id="coaching" class="content-section hidden">
       <div class="section-card">
         <h2><i class="fas fa-microphone-alt"></i> Coaching Vocal & Management</h2>
@@ -171,6 +169,104 @@
         <button class="close-btn"><i class="fas fa-times"></i> Fermer</button>
       </div>
     </section>
+
+    <!-- 🔹 NOUVELLE MODALE : FORMATIONS 🔹 -->
+    <section id="formations" class="content-section hidden">
+      <div class="section-card">
+        <h2><i class="fas fa-graduation-cap"></i> Nos Formations Diplômantes</h2>
+        <p style="margin-bottom: 25px; color: var(--gray);">
+          <strong>CRES POLY ART</strong> propose un enseignement complet et certifiant, 
+          alliant excellence musicale et culture générale.
+        </p>
+
+        <!-- CAP - Enseignement Musical -->
+        <div class="formation-block">
+          <h3><i class="fas fa-certificate"></i> CAP - Enseignement Musical</h3>
+          <div class="formation-grid">
+            <div class="formation-item">
+              <i class="fas fa-music"></i>
+              <h4>Solfège & Culture Musicale</h4>
+              <p>Lecture de notes, rythmique, harmonie, histoire de la musique</p>
+            </div>
+            <div class="formation-item">
+              <i class="fas fa-laptop-code"></i>
+              <h4>MAO (Musique Assistée par Ordinateur)</h4>
+              <p>Logic Pro, FL Studio, enregistrement, mixage, production numérique</p>
+            </div>
+            <div class="formation-item">
+              <i class="fas fa-guitar"></i>
+              <h4>Pratique Instrumentale</h4>
+              <p>Instrument au choix : piano, guitare, percussions, chant, basse</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ethnomusicologie -->
+        <div class="formation-block">
+          <h3><i class="fas fa-globe-africa"></i> Ethnomusicologie</h3>
+          <div class="formation-grid">
+            <div class="formation-item">
+              <i class="fas fa-drum"></i>
+              <h4>Musiques Africaines</h4>
+              <p>Rythmes traditionnels, instruments ancestraux, polyrythmies, transmission orale</p>
+            </div>
+            <div class="formation-item">
+              <i class="fas fa-search"></i>
+              <h4>Analyse Culturelle</h4>
+              <p>Contexte socio-historique, symbolique des rituels, patrimoine immatériel</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enseignement Général -->
+        <div class="formation-block">
+          <h3><i class="fas fa-book-open"></i> Enseignement Général</h3>
+          <div class="formation-grid">
+            <div class="formation-item">
+              <i class="fas fa-language"></i>
+              <h4>Français & Expression</h4>
+              <p>Rédaction, analyse de textes, communication orale et écrite</p>
+            </div>
+            <div class="formation-item">
+              <i class="fas fa-landmark"></i>
+              <h4>Histoire-Géographie</h4>
+              <p>Cultures du monde, enjeux contemporains, géopolitique de la musique</p>
+            </div>
+            <div class="formation-item">
+              <i class="fas fa-brain"></i>
+              <h4>Philosophie</h4>
+              <p>Réflexion critique, éthique artistique, pensée créative</p>
+            </div>
+            <div class="formation-item">
+              <i class="fas fa-comments"></i>
+              <h4>Anglais Professionnel</h4>
+              <p>Anglais musical, communication internationale, préparation mobilité</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infos pratiques -->
+        <div style="background: rgba(46,204,113,0.15); padding: 20px; border-radius: 16px; margin: 25px 0; border-left: 4px solid #2ecc71;">
+          <h4 style="color: #2ecc71; margin-bottom: 10px;"><i class="fas fa-info-circle"></i> Infos Pratiques</h4>
+          <ul style="list-style: none; color: var(--gray); line-height: 1.8;">
+            <li>✅ <strong>Durée :</strong> 1 à 2 ans selon le parcours</li>
+            <li>✅ <strong>Format :</strong> Présentiel / Hybride / En ligne</li>
+            <li>✅ <strong>Certification :</strong> Diplôme reconnu + Portfolio artistique</li>
+            <li>✅ <strong>Public :</strong> Adolescents et adultes, tous niveaux</li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align: center; margin-top: 30px;">
+          <a href="https://wa.me/22890588358?text=Bonjour,%20je%20souhaite%20m'inscrire%20à%20une%20formation%20CRES%20POLY%20ART" 
+             class="btn-primary" target="_blank">
+            <i class="fab fa-whatsapp"></i> Demander une inscription
+          </a>
+          <button class="close-btn" style="margin-left: 15px;"><i class="fas fa-times"></i> Fermer</button>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->

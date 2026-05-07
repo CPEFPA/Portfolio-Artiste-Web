@@ -224,3 +224,80 @@ footer a { color: var(--primary); text-decoration: none; }
 ::-webkit-scrollbar-track { background: rgba(255,255,255,0.08); }
 ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+/* ===== SECTION FORMATIONS ===== */
+.formation-block {
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 25px;
+  margin: 20px 0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.formation-block h3 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(233,30,99,0.3);
+}
+
+.formation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.formation-item {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 14px;
+  transition: var(--transition);
+  border-left: 3px solid transparent;
+}
+
+.formation-item:hover {
+  transform: translateX(5px);
+  border-left-color: var(--primary);
+  background: rgba(233,30,99,0.15);
+}
+
+.formation-item i {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.formation-item h4 {
+  margin: 8px 0 10px;
+  font-size: 1.1rem;
+  color: var(--light);
+}
+
+.formation-item p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Style spécifique pour le bouton Formations */
+.nav-btn[data-target="formations"]:hover,
+.nav-btn[data-target="formations"].active {
+  background: #2ecc71;
+  border-color: #27ae60;
+  box-shadow: 0 12px 40px rgba(46,204,113,0.4);
+}
+
+/* Responsive formations */
+@media (max-width: 768px) {
+  .formation-grid {
+    grid-template-columns: 1fr;
+  }
+  .formation-block {
+    padding: 20px 18px;
+  }
+}
