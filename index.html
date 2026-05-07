@@ -3,17 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio Artiste | Coaching & Performances</title>
+  <title>CRES POLY ART | Portfolio Musical</title>
+  
+  <!-- CSS Inline pour background vidéo (évite les problèmes de cache) -->
+  <style>
+    /* ===== BACKGROUND YOUTUBE PLEIN ÉCRAN ===== */
+    .video-bg-container {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      overflow: hidden;
+      z-index: -2;
+      background: #000;
+    }
+    .video-bg-container iframe {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 100vw; height: 100vh;
+      min-width: 177.78vh !important;
+      min-height: 56.25vw !important;
+      transform: translate(-50%, -50%);
+      border: none !important;
+      pointer-events: none !important;
+    }
+    .video-overlay {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.55);
+      z-index: -1; pointer-events: none;
+    }
+    
+    /* ===== BOUTON WHATSAPP FLOTTANT ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px; right: 25px;
+      width: 60px; height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37,211,102,0.6);
+    }
+    .whatsapp-float i { pointer-events: none; }
+    
+    /* Responsive bouton WhatsApp */
+    @media (max-width: 600px) {
+      .whatsapp-float {
+        width: 52px; height: 52px;
+        font-size: 1.7rem;
+        bottom: 15px; right: 15px;
+      }
+    }
+  </style>
+  
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
+
   <!-- Background YouTube Vidéo -->
   <div class="video-bg-container">
-    <!-- Pour changer de vidéo, remplacez WtMJ1dGa5TE par un autre ID de votre liste -->
-    <iframe id="youtubeBg" 
+    <iframe 
       src="https://www.youtube.com/embed/JwoV1-ykm9E?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playlist=JwoV1-ykm9E&playsinline=1&modestbranding=1"
-      frameborder="0" 
       allow="autoplay; encrypted-media" 
       allowfullscreen>
     </iframe>
@@ -22,10 +81,19 @@
   <!-- Overlay sombre -->
   <div class="video-overlay"></div>
 
+  <!-- Bouton WhatsApp Flottant -->
+  <a href="https://wa.me/22890588358?text=Bonjour%20CRES%20POLY%20ART,%20je%20souhaite%20plus%20d'informations" 
+     class="whatsapp-float" 
+     target="_blank" 
+     aria-label="Contacter sur WhatsApp"
+     title="Discuter sur WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
   <!-- Contenu principal -->
   <main class="content">
     <header class="hero">
-      <h1>Agence musicale</h1>
+      <h1>CRES POLY ART</h1>
       <p>Artiste • Pédagogue • Manager</p>
     </header>
 
@@ -99,7 +167,7 @@
             <p>Cours individuels via Zoom/Google Meet</p>
           </div>
         </div>
-        <a href="mailto:contact@votreartiste.com" class="btn-primary">Me contacter</a>
+        <a href="mailto:culturefusion360t@gmail.com" class="btn-primary">Me contacter</a>
         <button class="close-btn"><i class="fas fa-times"></i> Fermer</button>
       </div>
     </section>
@@ -107,11 +175,15 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; <span id="year"></span> CRES POLY ART • <a href="mailto:culturefusion360t@gmail.com">culturefusion360t@gmail.com</a></p>
+    <p>&copy; <span id="year"></span> CRES POLY ART • 
+      <a href="mailto:culturefusion360t@gmail.com">culturefusion360t@gmail.com</a> • 
+      <a href="https://wa.me/22890588358" target="_blank">WhatsApp: +228 90 58 83 58</a>
+    </p>
     <div class="social-links">
       <a href="https://youtu.be/WtMJ1dGa5TE" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+      <a href="https://wa.me/22890588358" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
 
