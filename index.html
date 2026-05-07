@@ -8,12 +8,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
-  <!-- Vidéo en arrière-plan -->
-  <video class="video-bg" id="videoBg" autoplay loop muted playsinline preload="auto">
-    <source src="assets/video/background.mp4" type="video/mp4" />
-    <source src="assets/video/background.webm" type="video/webm" />
-    <img src="assets/images/bg-fallback.jpg" alt="Background" class="bg-fallback" />
-  </video>
+  <!-- Background YouTube Vidéo -->
+  <div class="video-bg-container">
+    <!-- Pour changer de vidéo, remplacez WtMJ1dGa5TE par un autre ID de votre liste -->
+    <iframe id="youtubeBg" 
+      src="https://www.youtube.com/embed/JwoV1-ykm9E?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playlist=JwoV1-ykm9E&playsinline=1&modestbranding=1"
+      frameborder="0" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen>
+    </iframe>
+  </div>
   
   <!-- Overlay sombre -->
   <div class="video-overlay"></div>
@@ -21,7 +25,7 @@
   <!-- Contenu principal -->
   <main class="content">
     <header class="hero">
-      <h1>Bienvenue dans mon univers musical</h1>
+      <h1>Agence musicale</h1>
       <p>Artiste • Pédagogue • Manager</p>
     </header>
 
@@ -103,7 +107,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; <span id="year"></span> CPEFPA • <a href="mailto:contact@votreartiste.com">contact@votreartiste.com</a></p>
+    <p>&copy; <span id="year"></span> CRES POLY ART • <a href="mailto:culturefusion360t@gmail.com">culturefusion360t@gmail.com</a></p>
     <div class="social-links">
       <a href="https://youtu.be/WtMJ1dGa5TE" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>

@@ -1,27 +1,4 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
-  const videoBg = document.getElementById('videoBg');
-  
-  // Gestion vidéo background
-  if (videoBg) {
-    videoBg.addEventListener('loadedmetadata', async () => {
-      try { await videoBg.play(); } 
-      catch (e) { console.log('Autoplay bloqué par le navigateur'); }
-    });
-    
-    videoBg.addEventListener('error', () => {
-      const fallback = videoBg.querySelector('.bg-fallback');
-      if (fallback) {
-        videoBg.style.display = 'none';
-        fallback.style.display = 'block';
-      }
-    });
-
-    // Pause quand l'onglet n'est pas visible (économie CPU)
-    document.addEventListener('visibilitychange', () => {
-      document.hidden ? videoBg.pause() : videoBg.play().catch(() => {});
-    });
-  }
-
   // Année dynamique footer
   document.getElementById('year').textContent = new Date().getFullYear();
 
