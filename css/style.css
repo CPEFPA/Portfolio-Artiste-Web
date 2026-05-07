@@ -23,19 +23,24 @@ body {
 .video-bg-container {
   position: fixed;
   top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  z-index: -2;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
+  z-index: -2;
   background: #000;
 }
 
 .video-bg-container iframe {
   position: absolute;
   top: 50%; left: 50%;
-  min-width: 100%; min-height: 100%;
-  width: auto; height: auto;
+  width: 100vw;
+  height: 100vh;
+  /* Force le ratio 16:9 à COUVRIR l'écran (crop intelligent) */
+  min-width: 177.77vh;
+  min-height: 56.25vw;
   transform: translate(-50%, -50%);
-  pointer-events: none; /* Empêche l'interaction avec la vidéo */
+  pointer-events: none; /* Empêche tout clic/interaction avec YouTube */
+  border: none;
 }
 
 .video-overlay {
